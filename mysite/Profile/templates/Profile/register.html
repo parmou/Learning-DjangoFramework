@@ -1,0 +1,10 @@
+{% load static %}
+<form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{ userform.as_p }}
+	{{ userprofileform.as_p}}
+
+	<input type="submit" name="submit" value="Register">
+	
+</form>
+
